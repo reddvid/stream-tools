@@ -54,5 +54,6 @@ setInterval(
   }),
   5000
 );
+
 updateTime();
 updateTimeHalf();
