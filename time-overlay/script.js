@@ -41,7 +41,7 @@ setInterval(
     output.innerText =
       moment().format(urlParams["format"] || "ddd MMM Do YYYY, h:mm A") +
       " PHST";
-    timeBox.innerText = moment().format("MMM-DD HH:mm").toUpperCase();
+    timeBox.innerText = moment().format("DD-MMM HH:mm").toUpperCase();
   }),
   1000
 );
@@ -50,7 +50,7 @@ setInterval(
     output.innerText =
       moment().format(urlParams["format"] || "ddd MMM Do YYYY, h:mm A") +
       " PHST";
-    timeBox.innerText = moment().format("MMM-DD HH mm").toUpperCase();
+    timeBox.innerText = moment().format("DD-MMM HH mm").toUpperCase();
   }),
   5000
 );
