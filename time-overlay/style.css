@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+body {
+  font-family: "Motiva Sans Bold", "Bahnschrift", sans-serif;
+  font-weight: 700;
+  color: #f0eae9;
+  padding: 20px;
+  margin: 20px;
+  height: 1080px;
+  width: 1920px;
+}
+
+#v2 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 1840px !important;
+}
+
+.box {
+  height: 48px;
+  font-family: "Space Grotesk", monospace !important;
+  color: #fff5e0;
+}
+
+.time {
+  background: #c70038df;
+  font-size: 24px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: "Space Mono", monospace !important;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.ff {
+  background: #141e46df;
+  padding-left: 15px;
+  padding-right: 15px;
+  justify-content: start;
+  align-items: center;
+  display: flex;
+}
+
+.social {
+  background-image: linear-gradient(to right, #c70038df, #141e46df);
+  padding: 0px 30px 0px 10px;
+  justify-content: start;
+  font-size: 22px;
+  align-items: center;
+  display: flex;
+  width: 230px;
+  margin-left: 10px;
+}
+
+.social-wrapper {
+  flex-grow: 1;
+}
+
+.ff > span {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+svg {
+  vertical-align: middle;
+}
+
+.fb {
+  height: 40px;
+  width: 40px;
+}
+
+#cam-box {
+  margin-top: 80px;
+  width: 294px;
+  height: 312px;
+  overflow: hidden;
+  border: double 12px transparent;
+  background-image: linear-gradient(green, green),
+    linear-gradient(to right, #c70039df, #c60039df 70%, #641040df);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+#cam-box > img {
+  width: 100%;
+  margin-top: -50px;
+}
+
+input {
+  margin-top: 100px;
+}

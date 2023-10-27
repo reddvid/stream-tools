@@ -1,52 +1,67 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <title>A simple clock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Overlay</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body translate="no">
-  <style>
-    * {
-      font-family: 'Motiva Sans Bold', 'Bahnschrift', sans-serif;
-      font-size: 60px;
-      font-weight: 700;
-      color: #f0eae9;
-      padding: 20px;
-    }
-  </style>
+
   <div id="output"></div>
 
+  <div id="cam-box">
+    <img src="pic.jpg" />
+  </div>
+
+  <div id="v2">
+    <div class="time box">
+      <span id="timebox">15:55</span>
+    </div>
+    <div class="social-wrapper">
+      <div class="social box">
+        <svg transform="scale(.8)" width="40" height="40" viewBox="0 0 40 40" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_3148_715)">
+            <path
+              d="M22.4233 39.8556C32.3267 38.6567 40 30.2244 40 20C40 8.95444 31.0456 0 20 0C8.95444 0 0 8.95444 0 20C0 29.38 6.45667 37.2511 15.1689 39.4122L15.5556 37.7778H21.6667L22.4233 39.8556Z"
+              fill="#0866FF" />
+            <path
+              d="M15.1678 39.4118V26.1118H11.04V19.9996H15.1678V17.3663C15.1678 10.5585 18.2478 7.40625 24.9278 7.40625C26.1923 7.40625 28.3756 7.65403 29.2723 7.90181V13.4385C28.8 13.3907 27.9756 13.3663 26.96 13.3663C23.68 13.3663 22.4156 14.6063 22.4156 17.8385V19.9996H28.9523L27.8323 26.1107H22.4245V39.8551C19.9991 40.1472 17.5408 39.997 15.1689 39.4118H15.1678Z"
+              fill="white" />
+          </g>
+          <defs>
+            <clipPath id="clip0_3148_715">
+              <rect width="40" height="40" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+        <svg transform="scale(.7)" width="53" height="38" viewBox="0 0 53 38" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M51.2471 6.1872C50.6493 3.93977 48.8809 2.16681 46.6309 1.55917C42.5626 0.46875 26.2396 0.46875 26.2396 0.46875C26.2396 0.46875 9.92501 0.46875 5.84843 1.55917C3.60672 2.15848 1.83826 3.93145 1.23217 6.1872C0.144531 10.2659 0.144531 18.7811 0.144531 18.7811C0.144531 18.7811 0.144531 27.2964 1.23217 31.375C1.82996 33.6224 3.59842 35.3954 5.84843 36.0031C9.92501 37.0935 26.2396 37.0935 26.2396 37.0935C26.2396 37.0935 42.5626 37.0935 46.6309 36.0031C48.8726 35.4037 50.641 33.6308 51.2471 31.375C52.3348 27.2964 52.3348 18.7811 52.3348 18.7811C52.3348 18.7811 52.3348 10.2659 51.2471 6.1872Z"
+            fill="#FF3000" />
+          <path d="M21.0256 26.6305L34.5838 18.7811L21.0256 10.9318V26.6305Z" fill="white" />
+        </svg>
+        <span>@reddavidgg</span>
+      </div>
+    </div>
+    <div class="ff box">
+      <svg transform="scale(0.8)" width="27" height="22" viewBox="0 0 27 22" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M6.84886 0C11.1056 0 13.0566 2.30476 13.5001 3.45714C13.9435 2.30476 15.8944 0 20.1511 0C24.4079 0 26.4697 3.24762 26.8022 4.71429C27.7289 8.8 25.7383 14.7086 13.5001 22C1.26186 14.7086 -0.728884 8.8 0.19775 4.71429C0.53031 3.24762 2.59209 0 6.84886 0Z"
+          fill="#FFF5E0" />
+      </svg>
+      <span id="follower">follow</span>
+    </div>
+
+  </div>
+  <input type='file' accept='text/plain' onchange='openFile(event)'><br>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js'></script>
-  <script>
-    // https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
-    var urlParams;
-    (function () {
-      var match,
-        pl = /\+/g,  // Regex for replacing addition symbol with a space
-        search = /([^&=]+)=?([^&]*)/g,
-        decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
-        query = window.location.search.substring(1);
-
-      urlParams = {};
-      while (match = search.exec(query))
-        urlParams[decode(match[1])] = decode(match[2]);
-    })();
-
-    var output = document.getElementById("output");
-    if (urlParams["style"]) output.setAttribute("style", urlParams["style"]);
-    if (urlParams["bodyStyle"]) document.body.setAttribute("style", urlParams["bodyStyle"]);
-
-    var c;
-    setInterval(
-      c = function () {
-        output.innerText = moment().format(urlParams["format"] || 'ddd MMM Do YYYY, h:mm A') + " PHST";
-      }, 1000);
-    c();
-
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
