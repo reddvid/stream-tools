@@ -37,3 +37,71 @@
 .lt.content {
   padding: 20px;
 }
+
+.datetime {
+  overflow: hidden;
+  text-align: center;
+  color: whitesmoke;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  background-color: rgb(39, 39, 39);
+  width: 140px;
+  padding: 4px;
+  margin-bottom: 18px;
+}
+
+/* DATE TIME BOX */
+#datetimebox {
+  animation: 6s ease-in 60s infinite slidein;
+}
+/* END DATE TIME BOX */
+
+/* ANIMATIONS */
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slide {
+  0% {
+    margin-left: -400px;
+  }
+  20% {
+    margin-left: 0px;
+  }
+  35% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    width: 0px;
+  }
+  20% {
+    opacity: 1;
+    width: 0px;
+  }
+  30% {
+    width: 655px;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 655px;
+  }
+}
