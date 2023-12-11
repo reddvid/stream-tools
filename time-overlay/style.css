@@ -93,3 +93,29 @@ svg {
 input {
   margin-top: 100px;
 }
+
+.countdown {
+  background: linear-gradient(
+      253deg,
+      #568bb3 4.05%,
+      rgba(254, 179, 111, 0.34) 66.73%
+    ),
+    linear-gradient(
+      102deg,
+      #4e4f9f 13.59%,
+      #cc75a2 38.89%,
+      rgba(255, 184, 142, 0.72) 65.83%
+    );
+
+  padding: 15px 20px;
+  margin-top: 20px;
+  font-family: "Space Grotesk", monospace !important;
+  font-size: 1.3rem;
+  display: inline-block;
+  transition: all 0.5s ease-in;
+}
+
+#cdt {
+  margin: 0;
+  padding: 0;
+}
