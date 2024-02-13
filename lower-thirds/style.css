@@ -11,14 +11,6 @@
   margin: 24px;
 }
 
-#lower-thirds {
-  margin-bottom: 50px;
-}
-
-#output {
-  display: flex;
-}
-
 .lt.bottom {
   z-index: 3;
   position: relative;

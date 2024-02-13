@@ -3,43 +3,55 @@
 
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=0.6">
    <title>Lower-Thirds Overlay</title>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <link rel="stylesheet" href="style.css" />
+   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
-   <div id="output" class="container" style="height: 60vh !important; background-color: green;">
-      <div class="row align-items-end">
-         <div id="lower-thirds" class="flex-shrink-1">
-            <div class="lt top">
-               <div class="lt content">TEST</div>
+   <div id="output">
+      <div id="graphic-row">
+         <div id="topcontainer">
+            <div id="program-logo"></div>
+            <div id="titles">
+               <div class="bor"></div>
+               <div class="cen">
+                  <p id="maintext">PROGRAM TITLE</p>
+               </div>
+               <div class="bot">
+                  <p id="subtext">HOST NAME</p>
+               </div>
+            </div>
+            <div id="logo">
+               <div id="logotextbox">
+                  <img id="logoimage" src="images/logo-fix.svg" />
+                  <p id="callsign"></p>
+                  <p id="frequency"></p>
+               </div>
             </div>
          </div>
-      </div>
-      <div class="row align-items-end">
-         <div class="col datetime">
-            <div id="datetimebox">
-
-            </div>
+         <div id="lowercontainer">
+            <div id="datetimebox"></div>
+            <div id="scrolltextbox"></div>
+            <div id="livereplay">LIVE</div>
          </div>
       </div>
-   </div>
 
-   <div id="input">
+      <!-- <div id="input">
       <div class="form-floating">
          <textarea class="form-control" placeholder="Enter title" id="titleText" style="height: 100px"></textarea>
          <label for="titleText">Title</label>
       </div>
 
-      <button class="btn btn-primary float-end">Update</button>
-   </div>
+      <button class="btn btn-primary float-end">Update</button> 
+      <-- -->
 
+   </div>
    <!-- BOOTSTRAP -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

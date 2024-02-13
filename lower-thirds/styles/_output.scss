@@ -1,0 +1,16 @@
+#output {
+   position: relative;
+   height: 400px;
+   min-width: 720px;
+   background-color: green;
+   padding-left: (0.051)em;
+   padding-right: (0.051)em;
+}
+
+#graphic-row {
+   background-color: red;
+   z-index: 999;
+   height: 0.187em;
+   position: absolute;
+   bottom: 0.0537em;
+}

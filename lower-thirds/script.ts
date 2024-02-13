@@ -15,3 +15,4 @@ setInterval(
 
 updateTime();
 updateTimeHalf();
+
