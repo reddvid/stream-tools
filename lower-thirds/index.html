@@ -37,12 +37,86 @@
          </div>
          <div id="lowercontainer">
             <div id="datetimebox"></div>
-            <div id="scrolltextbox"></div>
+            <div id="scrolltextbox" class="marquee">
+               <p class="scrolltext">THIS IS A VERY VERY LONG MESSAGE. THIS IS A VERY VERY LONG MESSAGE. THIS IS A VERY
+                  VERY LONG MESSAGE. THIS IS A VERY VERY LONG MESSAGE. THIS IS A VERY VERY LONG MESSAGE. THIS IS A VERY
+                  VERY LONG MESSAGE.</p>
+            </div>
             <div id="livereplay">LIVE</div>
          </div>
       </div>
+   </div>
 
-      <!-- <div id="input">
+   <div id="controls">
+      <div class="row">
+         <div class="col-5">
+            <div class="form-floating mb-3">
+               <input id="titleText" class="form-control" type="text" placeholder="title text" />
+               <label for="titleText">Title Text (Program/Headlines)</label>
+            </div>
+            <div class="form-floating mb-3">
+               <input id="subtitleText" class="form-control" type="text" placeholder="subtitle text" />
+               <label for="subtitleText">Subtitle Text (Host/Hotlines)</label>
+            </div>
+            <br>
+            <div class="form-floating mb-3">
+               <textarea placeholder="scroll text" id="scrollText" class="form-control"
+                  style="height: 200px;"></textarea>
+               <label for="scrollText">Scrolling Text</label>
+            </div>
+         </div>
+         <div class="col-7">
+            <div class="form-check form-switch">
+               <input id="liveCheck" class="form-check-input" type="checkbox" role="switch">
+               <label for="liveCheck" class="form-check-label">Show Station Logo</label>
+            </div>
+
+            <div class="form-floating">
+               <select class="form-select" id="stationSelect">
+                  <option value="1">DZRL Batac</option>
+                  <option value="2">DZBS Baguio</option>
+                  <option value="3">DZKI Iriga</option>
+                  <option value="4">DYKC Cebu</option>
+                  <option value="5">DYKB Bacolod</option>
+                  <option value="6">DXKS Surigao</option>
+                  <option value="7">DXKO CDO</option>
+                  <option value="8">DXKD Dipolog</option>
+                  <option value="9">DXKT Davao</option>
+                  <option value="10">DXDX Gensan</option>
+                  <option value="11">DXKP Pagadian</option>
+                  <option value="12">DXXX Zamboanga</option>
+               </select>
+               <label for="stationSelect">Select Station</label>
+            </div>
+
+            <br>
+
+            <div class="form-check form-switch">
+               <input id="liveCheck" class="form-check-input" type="checkbox" role="switch">
+               <label for="liveCheck" class="form-check-label">Show Program Logo</label>
+            </div>
+            <div class="input-group mb-3">
+               <input type="file" class="form-control" id="uploadFile">
+               <label class="input-group-text" for="uploadFile">Upload thumbnail (1280 x 720 pixels)</label>
+            </div>
+            <br>
+
+            <div class="form-check form-switch">
+               <input id="liveCheck" class="form-check-input" type="checkbox" role="switch">
+               <label for="liveCheck" class="form-check-label">Show "LIVE" Box</label>
+            </div>
+
+            <br>
+
+           
+
+         </div>
+      </div>
+   </div>
+
+
+
+   <!-- <div id="input">
       <div class="form-floating">
          <textarea class="form-control" placeholder="Enter title" id="titleText" style="height: 100px"></textarea>
          <label for="titleText">Title</label>
@@ -51,7 +125,7 @@
       <button class="btn btn-primary float-end">Update</button> 
       <-- -->
 
-   </div>
+
    <!-- BOOTSTRAP -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

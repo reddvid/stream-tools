@@ -8,6 +8,8 @@
 }
 
 #output {
+  top: 0;
+  z-index: 9;
   height: 720px !important;
   width: 1280px !important;
   margin: 0 auto;
@@ -19,7 +21,7 @@
 #graphic-row {
   /* background-color: lightgreen; */
   z-index: 888;
-  display: flex;
+  display: flex; 
   gap: 4.5%;
   /* gap: 4.45%; */
   flex-wrap: wrap;
@@ -49,22 +51,23 @@
   text-align: center;
   flex: 0 0 14.85%;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: white;
+  vertical-align: middle;
+  line-height: 200%;
 }
 
-#scrolltextbox {
-  background-color: #fbfbfb;
-  width: 100%;
-}
+
 
 #livereplay {
   background-color: #bc0909;
   flex: 0 0 5.94%;
   text-align: center;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: white;
+  vertical-align: middle;
+  line-height: 200%;
 }
 
 #topcontainer {
@@ -74,13 +77,13 @@
 }
 
 #program-logo {
-  background-color: blue;
+  /* background-color: blue; */
   flex: 0 0 14.85%;
 }
 
 /*# sourceMappingURL=styles.css.map */
 #titles {
-  width: 100%;
+  width: 180%;
   margin: 0 0.25%;
   position: relative;
 }
@@ -92,10 +95,10 @@
     rgba(61, 52, 202, 1) 6%,
     rgba(28, 18, 183, 1) 30%,
     rgba(50, 38, 236, 0.96) 44%,
-    rgba(17, 8, 144, 0) 86%
+    rgba(17, 8, 144, 0) 75%
   );
-  top: 0; 
-  width: 80%; 
+  top: 0;
+  width: 80%;
   z-index: -1;
   left: 0;
   height: 72.33%;
@@ -105,25 +108,30 @@
 .cen {
   background: rgb(248, 248, 248);
   background: linear-gradient(
-    90deg,
+    50deg,
     rgba(248, 248, 248, 1) 6%,
     rgba(255, 255, 255, 1) 77%,
-    rgba(255, 255, 255, 0) 86%
+    rgba(255, 255, 255, 0) 96%
   );
   z-index: 9;
   margin-left: 0.8%;
-  height: 58.33%;
+  height: 60%;
   margin-top: 0.8%;
   font-weight: 700;
   font-size: 1.1rem;
-  color: white;
 }
 
+.cen > p {
+  font-size: 250%;
+  vertical-align: middle;
+  line-height: 120%;
+  margin-left: 1.5%;
+}
 
 .bot {
   background: rgb(61, 52, 202);
   background: linear-gradient(
-    90deg,
+    50deg,
     rgba(61, 52, 202, 1) 6%,
     rgba(28, 18, 183, 1) 30%,
     rgba(50, 38, 236, 0.96) 44%,
@@ -132,14 +140,15 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 32%;
+  height: 30%;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: white;
 }
 
 .bot > p {
-  margin-left: 4%;
+  margin-left: 2.5%;
+  vertical-align: middle;
 }
 
 #logo {
@@ -165,4 +174,44 @@
 #logoimage {
   width: 100%;
   display: flex;
+}
+
+/* CONTROLS */
+#controls {
+  width: 70%;
+  margin: 0 auto;
+  margin: 5vh auto;
+  margin-bottom: 120px;
+  z-index: -1;
+}
+
+
+
+/* MARQUEE */
+#scrolltextbox {
+  width: 100%;
+}
+
+.marquee {
+  overflow: hidden;
+  width: 100% !important;
+  position: relative;
+  background-color: #fbfbfb;
+  color: #0a0a0a; 
+  font-weight: 700;
+  font-size: 1rem; 
+}
+
+.marquee p {
+  margin-top: 0.35%; 
+  animation: scroll-left 16s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translate(100%);
+  }
+  100% {
+    transform: translate(-100%);
+  }
 }
