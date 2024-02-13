@@ -189,22 +189,23 @@
 
 /* MARQUEE */
 #scrolltextbox {
-  width: 100%;
+  width: 1000%;
 }
 
 .marquee {
   overflow: hidden;
-  width: 100% !important;
+  max-width: 920px !important;
   position: relative;
   background-color: #fbfbfb;
   color: #0a0a0a; 
   font-weight: 700;
-  font-size: 1rem; 
+  font-size: 1rem;
+  white-space: nowrap; 
 }
 
 .marquee p {
   margin-top: 0.35%; 
-  animation: scroll-left 16s linear infinite;
+  animation: scroll-left 24s linear infinite;
 }
 
 @keyframes scroll-left {
@@ -212,6 +213,6 @@
     transform: translate(100%);
   }
   100% {
-    transform: translate(-100%);
+    transform: translate(-250%);
   }
 }

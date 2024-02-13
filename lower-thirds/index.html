@@ -38,7 +38,7 @@
          <div id="lowercontainer">
             <div id="datetimebox"></div>
             <div id="scrolltextbox" class="marquee">
-               <p class="scrolltext">THIS IS A VERY VERY LONG MESSAGE. THIS IS A VERY VERY LONG MESSAGE. THIS IS A VERY
+               <p id="scrollingtext" class="scrolltext">THIS IS A VERY VERY LONG MESSAGE. THIS IS A VERY VERY LONG MESSAGE. THIS IS A VERY
                   VERY LONG MESSAGE. THIS IS A VERY VERY LONG MESSAGE. THIS IS A VERY VERY LONG MESSAGE. THIS IS A VERY
                   VERY LONG MESSAGE.</p>
             </div>
@@ -51,16 +51,17 @@
       <div class="row">
          <div class="col-5">
             <div class="form-floating mb-3">
-               <input id="titleText" class="form-control" type="text" placeholder="title text" />
+               <input onchange="changeTitleText(this.value)" onkeyup="changeTitleText(this.value)" id="titleText"
+                  class="form-control" type="text" placeholder="title text" />
                <label for="titleText">Title Text (Program/Headlines)</label>
             </div>
             <div class="form-floating mb-3">
-               <input id="subtitleText" class="form-control" type="text" placeholder="subtitle text" />
+               <input onchange="changeSubText(this.value)" onkeyup="changeSubText(this.value)" id="subtitleText" class="form-control" type="text" placeholder="subtitle text" />
                <label for="subtitleText">Subtitle Text (Host/Hotlines)</label>
             </div>
             <br>
             <div class="form-floating mb-3">
-               <textarea placeholder="scroll text" id="scrollText" class="form-control"
+               <textarea onchange="changeScrollText(this.value)" onkeyup="changeScrollText(this.value)" placeholder="scroll text" id="scrollText" class="form-control"
                   style="height: 200px;"></textarea>
                <label for="scrollText">Scrolling Text</label>
             </div>
@@ -108,7 +109,7 @@
 
             <br>
 
-           
+
 
          </div>
       </div>
