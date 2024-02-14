@@ -1,16 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans HK", sans-serif;
+}
+
 #output {
-   position: relative;
-   height: 400px;
-   min-width: 720px;
-   background-color: green;
-   padding-left: (0.051)em;
-   padding-right: (0.051)em;
+  top: 0;
+  z-index: 9;
+  height: 720px !important;
+  width: 1280px !important;
+  margin: 0 auto;
+  background-color: green;
+  display: flex;
+  align-items: flex-end;
 }
 
 #graphic-row {
-   background-color: red;
-   z-index: 999;
-   height: 0.187em;
-   position: absolute;
-   bottom: 0.0537em;
+  /* background-color: lightgreen; */
+  z-index: 888;
+  display: flex; 
+  gap: 4.5%;
+  /* gap: 4.45%; */
+  flex-wrap: wrap;
+  align-items: flex-end;
+  flex-flow: 3;
+  width: 100%;
+  height: 18.7% !important;
+  margin-left: 5.1%;
+  margin-right: 5.1%;
+  margin-bottom: 3.02%;
+}
+
+#lowercontainer {
+  display: flex;
+  height: 23.762%;
+  width: 100%;
+}
+
+#datetimebox {
+  background: rgb(188, 9, 9);
+  background: linear-gradient(
+    90deg,
+    rgba(188, 9, 9, 1) 0%,
+    rgba(136, 11, 11, 1) 70%,
+    rgba(188, 9, 9, 1) 100%
+  );
+  text-align: center;
+  flex: 0 0 14.85%;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  vertical-align: middle;
+  line-height: 200%;
+}
+
+
+
+#livereplay {
+  background-color: #bc0909;
+  flex: 0 0 5.94%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  vertical-align: middle;
+  line-height: 200%;
+}
+
+#topcontainer {
+  display: flex;
+  height: 71.29%;
+  width: 100%;
+}
+
+#program-logo {
+  /* background-color: blue; */
+  flex: 0 0 14.85%;
+}
+
+/*# sourceMappingURL=styles.css.map */
+#titles {
+  width: 180%;
+  margin: 0 0.25%;
+  position: relative;
+}
+
+.bor {
+  background: rgb(61, 52, 202);
+  background: linear-gradient(
+    90deg,
+    rgba(61, 52, 202, 1) 6%,
+    rgba(28, 18, 183, 1) 30%,
+    rgba(50, 38, 236, 0.96) 44%,
+    rgba(17, 8, 144, 0) 75%
+  );
+  top: 0;
+  width: 80%;
+  z-index: -1;
+  left: 0;
+  height: 72.33%;
+  position: absolute;
+}
+
+.cen {
+  background: rgb(248, 248, 248);
+  background: linear-gradient(
+    50deg,
+    rgba(248, 248, 248, 1) 6%,
+    rgba(255, 255, 255, 1) 77%,
+    rgba(255, 255, 255, 0) 96%
+  );
+  z-index: 9;
+  margin-left: 0.8%;
+  height: 60%;
+  margin-top: 0.8%;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.cen > p {
+  font-size: 250%;
+  vertical-align: middle;
+  line-height: 120%;
+  margin-left: 1.5%;
+}
+
+.bot {
+  background: rgb(61, 52, 202);
+  background: linear-gradient(
+    50deg,
+    rgba(61, 52, 202, 1) 6%,
+    rgba(28, 18, 183, 1) 30%,
+    rgba(50, 38, 236, 0.96) 44%,
+    rgba(17, 8, 144, 0) 86%
+  );
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30%;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.bot > p {
+  margin-left: 2.5%;
+  vertical-align: middle;
+}
+
+#logo {
+  background-color: white;
+  height: 100%;
+  flex: 0 0 5.94%;
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+  justify-content: center;
+  border: 0.25em solid rgb(188, 9, 9);
+}
+
+#logotextbox {
+  display: flex;
+  flex-flow: column;
+  align-content: center;
+  justify-content: center;
+  width: 78.95% !important;
+  margin: 0 auto !important;
+}
+
+#logoimage {
+  width: 100%;
+  display: flex;
+}
+
+/* CONTROLS */
+#controls {
+  width: 70%;
+  margin: 0 auto;
+  margin: 5vh auto;
+  margin-bottom: 120px;
+  z-index: -1;
+}
+
+
+
+/* MARQUEE */
+#scrolltextbox {
+  width: 1000%;
+}
+
+#mq-container {
+  overflow: hidden;
+  max-width: 920px !important;
+  position: relative;
+  background-color: #fbfbfb;
+  color: #0a0a0a; 
+  font-weight: 700;
+  font-size: 1rem;
+  white-space: nowrap; 
+}
+
+.marquee p {
+  margin-top: 0.35%; 
+  animation: scroll-left 24s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translate(100%);
+  }
+  100% {
+    transform: translate(-250%);
+  }
 }

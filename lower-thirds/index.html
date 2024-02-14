@@ -37,10 +37,14 @@
          </div>
          <div id="lowercontainer">
             <div id="datetimebox"></div>
-            <div id="scrolltextbox" class="marquee">
-               <p id="scrollingtext" class="scrolltext">THIS IS A VERY VERY LONG MESSAGE. THIS IS A VERY VERY LONG MESSAGE. THIS IS A VERY
-                  VERY LONG MESSAGE. THIS IS A VERY VERY LONG MESSAGE. THIS IS A VERY VERY LONG MESSAGE. THIS IS A VERY
-                  VERY LONG MESSAGE.</p>
+            <div id="mq-container" class="ticker-wrap">
+               <div id="scrolltextbox" class="marquee ticker">
+                  <div id="scrollingtext" class="scrolltext ticker_item">THIS IS A VERY VERY LONG MESSAGE. THIS IS A VERY VERY LONG
+                     MESSAGE. THIS IS A VERY
+                     VERY LONG MESSAGE. THIS IS A VERY VERY LONG MESSAGE. THIS IS A VERY VERY LONG MESSAGE. THIS IS A
+                     VERY
+                     VERY LONG MESSAGE.</p>
+               </div>
             </div>
             <div id="livereplay">LIVE</div>
          </div>
@@ -56,13 +60,14 @@
                <label for="titleText">Title Text (Program/Headlines)</label>
             </div>
             <div class="form-floating mb-3">
-               <input onchange="changeSubText(this.value)" onkeyup="changeSubText(this.value)" id="subtitleText" class="form-control" type="text" placeholder="subtitle text" />
+               <input onchange="changeSubText(this.value)" onkeyup="changeSubText(this.value)" id="subtitleText"
+                  class="form-control" type="text" placeholder="subtitle text" />
                <label for="subtitleText">Subtitle Text (Host/Hotlines)</label>
             </div>
             <br>
             <div class="form-floating mb-3">
-               <textarea onchange="changeScrollText(this.value)" onkeyup="changeScrollText(this.value)" placeholder="scroll text" id="scrollText" class="form-control"
-                  style="height: 200px;"></textarea>
+               <textarea onchange="changeScrollText(this.value)" onkeyup="changeScrollText(this.value)"
+                  placeholder="scroll text" id="scrollText" class="form-control" style="height: 200px;"></textarea>
                <label for="scrollText">Scrolling Text</label>
             </div>
          </div>
