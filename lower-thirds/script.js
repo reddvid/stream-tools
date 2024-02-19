@@ -3,7 +3,7 @@ var updateTime;
 var updateTimeHalf;
 setInterval(
   (updateTime = function () {
-    timeBox.innerText = moment().format("MMM d | h:mm A").toUpperCase();
+    timeBox.innerText = moment().format("MMM d, 'YY | h:mm A").toUpperCase();
   }),
   10000
 );
